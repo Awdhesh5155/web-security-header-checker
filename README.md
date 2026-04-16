@@ -25,6 +25,9 @@ This tool helps in analyzing server configurations and identifying important sec
 ```bash
 git clone https://github.com/your-username/web-security-header-tool.git
 cd web-security-header-tool
+chmod +x Security-header-checker.py
+python3 Security-header-checker.py
+
 
 Usage
 python Respones.py
