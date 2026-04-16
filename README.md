@@ -1,3 +1,4 @@
+```python
 import urllib.request
 from urllib.request import Request
 from urllib.error import URLError, HTTPError
@@ -21,12 +22,6 @@ def chrome_user_agent(url):
         for header, value in response.getheaders():
             print(f"{header}: {value}")
 
-        request = Request(url)
-        request.add_header('User-Agent', USER_AGENT)
-
-        #for header, value in request.header_items():
-           # print(f"{header}: {value}")
-
     except HTTPError as e:
         print(f"\nHTTP Error: {e.code} - {e.reason}")
 
@@ -36,10 +31,11 @@ def chrome_user_agent(url):
     except Exception as e:
         print(f"\nUnexpected Error: {e}")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     url = input("Enter the URL (with https:// or http://): ").strip()
 
     if not url.startswith(("http://", "https://")):
         print("Invalid URL. Please include http:// or https://")
     else:
         chrome_user_agent(url)
+```
